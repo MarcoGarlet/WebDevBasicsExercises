@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1 id="pluto">Titolo 1</h1>
+        <p>Primo paragrafo.</p>
+        <p id="pippo">Secondo paragrafo.</p>
+        <p class="pluto">Terzo paragrafo.</p>
+        <h4>titoletto.</h4>
+    <script>
+        $('#pippo').hide(); //nascondi
+        $('p.pluto').css("color","green");
+        $('p.pluto').siblings('h4').css("color", "red" );
+    </script>
+    </body>
+</html>
