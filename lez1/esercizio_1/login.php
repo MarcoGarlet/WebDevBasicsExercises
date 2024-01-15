@@ -2,13 +2,13 @@
 session_start();
 include("conn.php");
 
-$username=$_POST['username'];
+$username=$_POST['email'];
 $password=hash('sha256',$_POST['password']);
 
-$checklogin = 'SELECT * FROM Users WHERE username=:username AND password=:password';
+$checklogin = 'SELECT * FROM Users WHERE email=:email AND password=:password';
 
 $stmt = $conn->prepare($checklogin);
-$stmt->execute([':username'=>$username,':password'=>$password]);
+$stmt->execute([':email'=>$email,':password'=>$password]);
 
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 

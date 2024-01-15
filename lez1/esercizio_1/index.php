@@ -5,7 +5,7 @@
             if (!isset($_SESSION['user_id'])) { 
                 echo <<<EOD
                 <form name="loginForm" id="loginForm" method="post" action="login.php">
-                Username: <input type="text" name="username" id="username" required>
+                Email: <input type="text" name="email" id="email" required>
                 Password: <input type="password" name="password" id="password" required> <br/>
                 <input type="submit" name="login" id="login" value="Login"/>
                 EOD;
