@@ -2,7 +2,7 @@
 session_start();
 include("conn.php");
 
-$username=$_POST['email'];
+$email=$_POST['email'];
 $password=hash('sha256',$_POST['password']);
 
 $checklogin = 'SELECT * FROM Users WHERE email=:email AND password=:password';
