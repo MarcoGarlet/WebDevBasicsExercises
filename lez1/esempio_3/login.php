@@ -3,7 +3,8 @@ include("conn.php");
 $username=$_POST['username'];
 $password=hash('sha256',$_POST['password']);
 
-$checklogin = 'SELECT * FROM Users WHERE username=:username AND password=:password';
+$checklogin = 'SELECT * FROM Users WHERE username=:username AND password=:password'; // Using a cryptographic hash function with a salt, such as bcrypt, is a more secure choice for password hashing.
+
 
 $stmt = $conn->prepare($checklogin);
 $stmt->execute([':username'=>$username,':password'=>$password]);

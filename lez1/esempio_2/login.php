@@ -1,7 +1,8 @@
 <?php 
 include("conn.php");
 $username=$_POST['username'];
-$password=hash('sha256',$_POST['password']);
+$password=hash('sha256',$_POST['password']); // Using a cryptographic hash function with a salt, such as bcrypt, is a more secure choice for password hashing.
+
 
 $checklogin="SELECT * FROM Users WHERE username=? AND password=?";
 $query = $connection->prepare($checklogin);
