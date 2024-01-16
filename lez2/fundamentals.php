@@ -36,9 +36,16 @@
                "size"  => array("small", "medium", "large"));
     
     print_r(array_keys($array));
-    print_r($array)
+    print_r($array);
 
     // TO_DO aggiungere una chiave 'id' valorizzata con 1337
 
+
+    // esempio 5
+    $array_esempio = array(1,2,3,9);
+    foreach($array_esempio as $element){
+        echo $element."\n";
+    }
+    // TO_DO stampare un array keys
 
 ?>
