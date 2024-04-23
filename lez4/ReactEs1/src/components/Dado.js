@@ -1,5 +1,6 @@
 import React from 'react';
 
+import welcomeImg from '../img/welcomeD.jpg';
 export default class Dado extends React.Component{
     constructor(props){
         super(props);
@@ -14,7 +15,7 @@ export default class Dado extends React.Component{
     render(){
         let valore;
         if (parseInt(this.state.numero) == 0){
-            valore = <p>Lancia il dado facendo click sul pulsante</p>;
+            valore = <img src={welcomeImg} style={{maxWidth:'20%'}}/>;
         } else{
             valore = <div>{this.state.numero}</div>
         }
